@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Galley Crash Demo</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Select Demo</string>
+    <string name="second_fragment_label">Crash Handling</string>
+    <string name="third_fragment_label">Gallery Demo</string>
+    <string name="forth_fragment_label">Selected Images</string>
+    <string name="crash_app_txt">Crash the app</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="old_way">Old Method</string>
+    <string name="new_way">New Method</string>
+    <string name="demo_crash">Crash Handling Demo</string>
+    <string name="demo_gallery">Access Gallery Demo</string>
+
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SelectDemoFragment">
+
+    <fragment
+        android:id="@+id/SelectDemoFragment"
+        android:name="com.shadowapps.gallerycrashdemo.fragments.SelectDemoFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_select_demo">
+
+        <action
+            android:id="@+id/action_SelectDemoFragment_to_CrashDemoFragment"
+            app:destination="@id/CrashDemoFragment" />
+
+        <action
+            android:id="@+id/action_SelectDemoFragment_to_GalleryDemoFragment"
+            app:destination="@id/GalleryDemoFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/CrashDemoFragment"
+        android:name="com.shadowapps.gallerycrashdemo.fragments.CrashDemoFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_crash_demo">
+
+        <action
+            android:id="@+id/action_CrashDemoFragment_to_SelectDemoFragment"
+            app:destination="@id/SelectDemoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/GalleryDemoFragment"
+        android:name="com.shadowapps.gallerycrashdemo.fragments.GalleryDemoFragment"
+        android:label="@string/third_fragment_label"
+        tools:layout="@layout/fragment_gallery_demo">
+        <action
+            android:id="@+id/action_GalleryDemoFragment_to_ViewSelectedImageFragment"
+            app:destination="@id/ViewSelectedImageFragment" >
+
+            <argument
+                android:name="images"
+                app:argType="string[]"/>
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/ViewSelectedImageFragment"
+        android:name="com.shadowapps.gallerycrashdemo.fragments.ViewSelectedImageFragment"
+        android:label="@string/forth_fragment_label"
+        tools:layout="@layout/fragment_view_selected_images">
+
+        <argument
+            android:name="images"
+            app:argType="string[]"/>
+        <action
+            android:id="@+id/action_ViewSelectedImageFragment_to_GalleryDemoFragment"
+            app:destination="@id/GalleryDemoFragment" />
+    </fragment>
+</navigation>
